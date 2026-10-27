@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "কলম২৪ - পজিটিভ বাংলাদেশ",
+  "short_name": "কলম২৪",
+  "description": "নিরপেক্ষ ও বস্তুনিষ্ঠ বাংলা অনলাইন সংবাদ পোর্টাল",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#dc2626",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><circle cx='96' cy='96' r='90' fill='%23dc2626'/><path d='M96 36 L132 108 L96 156 L60 108 Z' fill='white'/><circle cx='96' cy='96' r='12' fill='%23dc2626'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><circle cx='256' cy='256' r='240' fill='%23dc2626'/><path d='M256 96 L352 288 L256 416 L160 288 Z' fill='white'/><circle cx='256' cy='256' r='32' fill='%23dc2626'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

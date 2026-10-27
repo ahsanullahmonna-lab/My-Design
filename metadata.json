@@ -1,0 +1,6 @@
+{
+  "name": "Kolom24 - Bangladeshi News Portal",
+  "description": "Professional Bangladeshi online news portal and editorial CMS with breaking news ticker, multi-category layouts, trending widgets, article reader, and admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,338 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'SolaimanLipi';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.maateen.me/solaiman-lipi/solaimanlipi-normal-v1.0.woff2') format('woff2'),
+       url('https://fonts.maateen.me/solaiman-lipi/solaimanlipi-normal-v1.0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SolaimanLipi';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://fonts.maateen.me/solaiman-lipi/solaimanlipi-bold-v1.0.woff2') format('woff2'),
+       url('https://fonts.maateen.me/solaiman-lipi/solaimanlipi-bold-v1.0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Kalpurush';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400 700;
+  src: url('https://fonts.maateen.me/kalpurush/Kalpurush-v0.258.woff2') format('woff2'),
+       url('https://fonts.maateen.me/kalpurush/Kalpurush-v0.258.ttf') format('truetype');
+}
+
+:root {
+  --site-base-font-size: 18px; /* 2 steps larger than standard 16px (112.5%) for enhanced readability */
+  --primary-color: #dc2626;
+  --font-family-global: 'SolaimanLipi', 'Hind Siliguri', 'Noto Sans Bengali', 'Anek Bangla', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Universal SolaimanLipi typography enforcement across frontend and Admin Panel */
+html,
+body,
+#root,
+button,
+input,
+select,
+textarea,
+optgroup,
+option,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+label,
+div,
+table,
+th,
+td,
+nav,
+aside,
+header,
+footer {
+  font-family: var(--font-family-global);
+}
+
+@layer base {
+  html {
+    font-size: var(--site-base-font-size, 18px);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    font-family: var(--font-family-global);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: var(--font-family-global) !important;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #0f172a;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .dark body {
+    color: #f8fafc;
+    background-color: #0b1120;
+  }
+  
+  /* High-contrast Bengali newspaper headings - scaled, deep black and crisp */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-global) !important;
+    letter-spacing: -0.012em;
+    line-height: 1.35;
+    color: #090d16;
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #ffffff;
+  }
+
+  /* High contrast editorial copy */
+  p {
+    color: #1e293b;
+  }
+  .dark p {
+    color: #e2e8f0;
+  }
+
+  button, input, select, textarea {
+    font-family: var(--font-family-global) !important;
+  }
+}
+
+/* High Contrast Readability & Anti-Washout Overrides */
+:not(.dark) .text-slate-400:not(svg),
+:not(.dark) .text-gray-400:not(svg) {
+  color: #1e293b !important; /* Elevate faint gray/slate-400 to crisp, rich slate-800 */
+}
+
+:not(.dark) .text-slate-500:not(svg),
+:not(.dark) .text-gray-500:not(svg) {
+  color: #0f172a !important; /* Elevate faint gray/slate-500 to solid dark slate-900 */
+}
+
+:not(.dark) .text-slate-600:not(svg),
+:not(.dark) .text-gray-600:not(svg) {
+  color: #090d16 !important; /* Elevate slate/gray-600 to deep solid black */
+}
+
+.dark .text-slate-400:not(svg),
+.dark .text-gray-400:not(svg) {
+  color: #cbd5e1 !important; /* Elevate washed-out dark mode text to crisp light slate-300 */
+}
+
+.dark .text-slate-500:not(svg),
+.dark .text-gray-500:not(svg) {
+  color: #e2e8f0 !important; /* Elevate faint dark mode text to solid light slate-200 */
+}
+
+/* Purge low-contrast opacity wash-out on active editorial and navigation text */
+nav a, nav button, nav span, header a, header span, p, h1, h2, h3, h4, h5, h6 {
+  -webkit-text-size-adjust: 100%;
+}
+
+:not(:disabled) > span,
+:not(:disabled) > p,
+:not(:disabled) > a {
+  opacity: 1;
+}
+
+.font-bangla {
+  font-family: var(--font-family-global) !important;
+}
+
+.font-serif-bangla {
+  font-family: 'Noto Serif Bengali', 'Tiro Bangla', 'Kalpurush', Georgia, Cambria, 'Times New Roman', serif;
+}
+
+.font-solaiman {
+  font-family: var(--font-family-global) !important;
+}
+
+.font-kalpurush {
+  font-family: 'Kalpurush', 'SolaimanLipi', 'Hind Siliguri', 'Noto Sans Bengali', system-ui, sans-serif;
+}
+
+.font-sans {
+  font-family: var(--font-family-global) !important;
+}
+
+.font-latin {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+/* Custom smooth marquee ticker animation with continuous fluid loop */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 85s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover,
+.group\/ticker:hover .animate-marquee,
+.group:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+.animate-marquee.is-paused {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars for menus while allowing horizontal scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tabular numbers for clean stats and ranking */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================================================
+   Premium News Card & Media Interactions
+   ========================================================================= */
+
+/* Dynamic Responsive Grid Containers with Auto-fit and Minmax to Eliminate Empty Whitespace */
+.dynamic-news-grid-sm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.dynamic-news-grid-md {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.dynamic-news-grid-lg {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+}
+
+/* Soft lift and subtle depth */
+.news-card-hover {
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.news-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+/* Ken Burns Media Effect: Smooth slow zoom on hover */
+.media-kenburns {
+  transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.group:hover .media-kenburns,
+.media-kenburns:hover {
+  transform: scale(1.06);
+}
+
+/* Reading Progress Bar Glow */
+.reading-progress-bar {
+  background: linear-gradient(90deg, #dc2626 0%, #ef4444 70%, #f87171 100%);
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.45);
+  transition: width 0.12s ease-out;
+}
+
+/* Authentic Broadsheet Newspaper Print Styles */
+.newspaper-paper {
+  background-color: #f4f0ea;
+  color: #1a1a1a;
+  background-image: 
+    radial-gradient(#e5dfd3 0.65px, transparent 0.65px), 
+    radial-gradient(#e5dfd3 0.65px, #f4f0ea 0.65px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.newspaper-rule {
+  border-color: #d1ccc0;
+}
+
+.newspaper-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.newspaper-dropcap::first-letter {
+  float: left;
+  font-size: 2.75rem;
+  line-height: 0.82;
+  font-weight: 800;
+  margin-right: 0.4rem;
+  margin-top: 0.1rem;
+  color: #111827;
+  font-family: 'Noto Serif Bengali', 'Tiro Bangla', serif;
+}
+
+@media print {
+  .no-print, header, nav, footer, aside, [role="navigation"] {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+  .epaper-canvas-wrapper,
+  .print-broadsheet-wrapper {
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    position: static !important;
+    display: block !important;
+  }
+  #newspaper-print-canvas,
+  #broadsheet-print-container {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: 2px solid #000000 !important;
+    padding: 1.5rem !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+}
+
